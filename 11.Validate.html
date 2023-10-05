@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title> 
+</head>
+<body>
+    <h1>Form Validation</h1>
+        
+    Username: <input type="text" id="user"><br><br>
+    Password: <input type="password" id="pwd"><br><br>
+    Confirm password: <input type="password" id="confirmPwd"><br><br>
+    Phone No: <input type="text" id="phn"><br><br>
+    Pin code: <input type="text" id="pin"><br><br>
+    <button type="button" onclick="validateForm()">Validate</button>
+    <script>
+        function validateForm() 
+        {
+            var username = document.getElementById('user').value;
+            var password = document.getElementById('pwd').value;
+            var confirmPassword = document.getElementById('confirmPwd').value;
+            var phoneNumber = document.getElementById('phn').value;
+            var pinCode = document.getElementById('pin').value;
+            var validationResult = "";
+
+            if (username.length < 8) {
+                validationResult += "Username should be at least 8 characters.\n";
+            }
+            if (password.length < 8) {
+                validationResult += "Password should be at least 8 characters.\n";
+            }
+            if (password !== confirmPassword) {
+                validationResult += "Passwords do not match.\n";
+            }
+            if (phoneNumber.length > 10||phoneNumber.length < 10) {
+                validationResult += "Phone number should be 10 digits.\n";
+            }
+            if (pinCode.length > 6 || pinCode.length <6 ) {
+                validationResult += "Pin code should be 6 digits.\n";
+            }
+            if (validationResult === "") {
+                window.location.href = "https://2203a51251.github.io/c_hci_batch_13.github.io/";
+            } 
+            else {
+                window.alert(validationResult);
+            }
+        }
+    </script>
+</body>
+</html>

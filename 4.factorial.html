@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>Factorial of Number</h1>
+    Number: <input type="text" id="num"><br><br>
+    <button type="button" onclick="fact()">Factorial</button>
+
+    <script>
+        function fact()
+        {
+            var n,i;
+            var f=1;
+            n=parseInt(document.getElementById("num").value);
+            if(n>0)
+            {
+                for(i=1;i<=n;i++)
+                {
+                    f*=i;
+                }
+                document.writeln("Factorial of ",n," is ",f);
+            }
+            else
+            {
+                document.write("enter a positive number");
+            }
+        }
+    </script>
+</body>
+</html>

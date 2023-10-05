@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check whether number is positive or negative</title>
+</head>
+<body>
+    <h1>Check whether number is positive or negative</h1>
+    Number: <input type="text" id="num"><br><br>
+    <button type="button" onclick="check()">Check</button>
+    <script>
+    function check()
+    {
+        var x;
+        a=parseInt(document.getElementById("num").value);
+        if(a>=0)
+        {
+            window.alert("The number "+a+" is positive");
+        }
+        else
+        {
+            window.alert("The number "+a+" is negative");
+        }
+    }
+    </script>
+</body>
+</html>
